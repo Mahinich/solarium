@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Slotarium</title>
 </head>
@@ -13,18 +16,18 @@
         <img src="images/logo.png" alt="logo" class="header__logo-img logo__img">
       </div>
   
-      <address class="header__contacts">
-        <div class="header__email">
-          Email: <a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
-        </div>
-  
-        <div class="header__phone">
-          <a href="tel:+1234567890">+1234567890</a>
-        </div>
-      </address>
+        <address class="header__contacts">
+          <div class="header__email">
+            <a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
+          </div>
+    
+          <div class="header__phone">
+            <a href="tel:+1234567890">+1234567890</a>
+          </div>
+        </address>
   
       <div class="header__lang lang">
-        <label for="lang-switch">Select Language</label>
+        <label for="lang-switch">Lang</label>
         <select name="languages" id="lang-switch" class="lang__switcher">
           <option value="en" class="lang__en">EN</option>
           <option value="ua" class="lang__en">UA</option>
@@ -177,13 +180,30 @@
       <div class="container contact-us__wrap">
         <label for="form">Get in Touch</label>
         <form id='form' class="contact-us__form">
-          <input type="email" class="contact-us__email">
-          <textarea name="comment" id="comment" cols="30" rows="10" class="contact-us__comment"></textarea>
+          <input type="text" class="contact-us__name" placeholder="Name">
+          <input type="email" class="contact-us__email" placeholder="Email">
+          <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Type your text" class="contact-us__comment"></textarea>
           <button type="submit" class="contact-us__btn">Submit</button>
         </form>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <div class="footer__logo logo">
+        <img src="images/logo.png" alt="logo" class="footer__logo-img logo__img">
+      </div>
+
+      <div class="footer__pr-policy">
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer__adult-icon">
+        <img src="images/icons/adult_icon.png" alt="18+ years old">
+      </div>
+    </div>
+  </footer>
   
   <script src="js/index.js"></script>
 </body>

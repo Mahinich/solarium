@@ -1,0 +1,145 @@
+/* RESET STYLES */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  text-align: right;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: "Rubik";
+  font-weight: 300;
+}
+
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+select {
+  background-color: transparent;
+}
+
+/* RESET STYLES */
+/* GENERAL STYLES */
+.container {
+  width: 340px;
+  margin: 0 auto;
+}
+
+/* GENERAL STYLES */
+/* MAIN STYLES */
+/* Header */
+.header {
+  background-color: #160E33;
+}
+.header__wrap {
+  padding: 25px 10px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  max-width: 100px;
+  height: 50px;
+}
+.header__logo-img {
+  width: 100%;
+}
+.header__contacts {
+  color: #EF443B;
+  font-size: 11px;
+}
+.header .lang {
+  color: beige;
+  border: 0.5px solid #EF443B;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  row-gap: 3px;
+}
+.header .lang .lang__switcher {
+  border: none;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 10px rgba(245, 245, 200, 0.2);
+          box-shadow: inset 0 0 10px rgba(245, 245, 200, 0.2);
+  color: beige;
+}
+
+/* Header */
+/* main-slider */
+/* main-slider */
+/* games */
+/* games */
+/* team */
+/* team */
+/* find-us */
+/* find-us */
+/* verifications */
+/* verifications */
+/* contact-us */
+/* contact-us */
+/* Footer */
+/* Footer */
+/* MAIN STYLES */
