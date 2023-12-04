@@ -5,9 +5,17 @@
 /* RESET STYLES */
 
 /* GENERAL STYLES */
-  .container {
-    margin: 0 auto;
-  }
+:root {
+  --accent-color: #EF443B;
+}
+ 
+.container {
+  margin: 0 auto;
+}
+
+.main {
+  background-color: #160E33;
+}
 /* GENERAL STYLES */
 
 /* MAIN STYLES */
@@ -18,11 +26,10 @@
   }
   /* Header Start */
   .header {
+    padding-top: 12px;
+    // padding-bottom: 12px;
     background-color: #160E33;
-
     &__wrap {
-      padding-top: 24px;
-      padding-bottom: 24px;
       height: 100px;
       display: flex;
       justify-content: space-between;
@@ -33,17 +40,19 @@
       height: 50px;
       &-img {
         width: 100%;
-        // height: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 50%;
       }
     }
     &__contacts {
-      color: #EF443B;
+      color: var(--accent-color);
       font-size: 12px;
     }
 
     .lang {
       color:beige;
-      border: 1px solid #EF443B;
+      border: 1px solid var(--accent-color);
       border-radius: 8px;
       display: flex;
       flex-direction: column;
@@ -63,6 +72,8 @@
 
   /* Main-slider Start */
   .basic-slider {
+    padding-top: 12px;
+    padding-bottom: 12px;
     min-height: 205px;
     &__img > img {
       max-width:100%;
@@ -72,32 +83,85 @@
   /* Main-slider End*/
 
   /* Games Start */
-    .games {
-      &__wrap {
-        padding-top: 24px;
-        padding-bottom: 24px;
+  .games {
+    color: #fff;
+    min-height: 450px;
+    &__wrap {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 12px;
+      row-gap: 12px;
+    }
+    &__item {
+      text-align: center;
+    }
+    &__item-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      overflow: clip;
+      margin-bottom: 4px;
+    }
+  }
+    /* Games End*/
+
+    /* Team Start*/
+  .team {
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-height: 300px;
+    &__members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    &__member {
+      &-photo {
+        width: 100%;
+        margin-bottom: 4px;
       }
-      &__items {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 12px;
-        row-gap: 12px;
+      border-radius: 12px;
+      // border: 1px solid var(--accent-color);
+      box-shadow: 0px 0px 40px 0px rgba(239, 68, 59, 0.40);
+      flex-basis: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 4px;
+      &-divider {
+        width: 100%;
+        height: 1px;
+        background-color: #FFF;
+        margin-bottom: 4px;
       }
-      &__item {
-        text-align: center;
+      &-name {
+        margin-bottom: 2px;
       }
-      &__item-img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 16px;
-        overflow: clip;
+      &-post {
+        color:var(--accent-color);
+        font-weight: 500;
+        font-size: 14px;
       }
     }
-  /* Games End*/
+    &__message {
+      &-text {
+        font-size: 14px;
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+    /* Team End*/
 }
-
-/* team */
-/* team */
 
 /* find-us */
 /* find-us */
