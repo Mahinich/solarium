@@ -64,7 +64,7 @@ select {
 }
 
 /* RESET STYLES */
-/* GENERAL STYLES */
+/* GENERAL STYLES START*/
 :root {
   --accent-color: rgb(239, 68, 59);
 }
@@ -72,19 +72,6 @@ select {
 body {
   overflow-x: clip;
   background-color: #160E33;
-}
-
-.logo {
-  max-width: 100px;
-  height: 50px;
-}
-.logo__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 50%;
-     object-position: 0 50%;
 }
 
 .container {
@@ -97,11 +84,23 @@ body {
   padding-bottom: 12px;
 }
 
-/* GENERAL STYLES */
+/* GENERAL STYLES END*/
 /* MAIN STYLES */
 @media (min-width: 359px) {
   .container {
-    max-width: 95%;
+    width: 95%;
+  }
+  .logo {
+    max-width: 100px;
+    height: 50px;
+  }
+  .logo__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 50%;
+       object-position: 0 50%;
   }
   /* Header Start */
   .header {
@@ -118,23 +117,54 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header__logo {
-    max-width: 100px;
-    height: 50px;
-  }
-  .header__logo-img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 50%;
-       object-position: 0 50%;
-  }
   .header__contacts {
     color: var(--accent-color);
     font-size: 12px;
+    text-align: center;
   }
-  .header .lang {
+  .header__email {
+    margin-bottom: 8px;
+  }
+  .header__email a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 28px;
+    position: relative;
+  }
+  .header__email a::before {
+    content: "";
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/header/email_icon.svg");
+  }
+  .header__phone a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .header__phone a::before {
+    content: "";
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/icons/header/phone-call_icon.svg");
+  }
+  .header__lang {
     color: beige;
     border: 1px solid var(--accent-color);
     border-radius: 8px;
@@ -151,18 +181,18 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 5px;
-    row-gap: 3px;
+    padding: 4px;
+    row-gap: 4px;
   }
-  .header .lang__switcher {
+  .header__lang-switcher {
     border: none;
-    border-radius: 3px;
-    -webkit-box-shadow: inset 0 0 10px rgba(245, 245, 200, 0.2);
-            box-shadow: inset 0 0 10px rgba(245, 245, 200, 0.2);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 12px rgba(245, 245, 200, 0.2);
+            box-shadow: inset 0 0 12px rgba(245, 245, 200, 0.2);
     color: beige;
   }
   /* Header End */
-  /* Main-slider Start */
+  /* Basic-slider Start */
   .basic-slider {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -172,7 +202,7 @@ body {
     max-width: 100%;
     height: auto;
   }
-  /* Main-slider End*/
+  /* Basic-slider End*/
   /* Games Start */
   .games {
     color: #fff;
@@ -384,6 +414,8 @@ body {
     margin: 0 auto;
     color: #FFF;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
   }
   /* Contact-us End*/
   /* Footer Start */
@@ -436,5 +468,82 @@ body {
     margin-bottom: 16px;
   }
   /* Privacy Policy Page End*/
+}
+@media (min-width: 479px) {
+  /* Header Start*/
+  .header__lang {
+    padding: 6px 16px;
+  }
+  .header__lang label {
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+  .header__lang-switcher {
+    letter-spacing: 4px;
+    font-size: 14px;
+  }
+  .header__contacts {
+    font-size: 16px;
+  }
+  /* Header End*/
+  /* Contact-us Start */
+  .contact-us__btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  /* Contact-us End */
+}
+@media (min-width: 767px) {
+  .container {
+    width: 83%;
+  }
+  /* Header Start */
+  .header {
+    padding-top: 16px;
+  }
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 32px;
+       -moz-column-gap: 32px;
+            column-gap: 32px;
+  }
+  .header__email {
+    margin-bottom: 0;
+  }
+  /* Header End */
+  /* Basic-slider Start */
+  .basic-slider {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  /* Basic-slider End */
+  /* Games Start */
+  .games {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  /* Games End */
+  /* Team Start*/
+  .team {
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+  /* Team End*/
+  /* Find-us Start */
+  /* Find-us End */
+  /* Contact-us Start */
+  .contact-us {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  /* Contact-us End */
+  /* Footer Start */
+  .footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  /* Footer End */
 }
 /* MAIN STYLES */
