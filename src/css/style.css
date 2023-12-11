@@ -66,7 +66,7 @@ select {
 /* RESET STYLES */
 /* GENERAL STYLES START*/
 :root {
-  --accent-color: rgb(239, 68, 59);
+  --accent-color: #ef443b;
 }
 
 body {
@@ -92,7 +92,7 @@ body {
   }
   .logo {
     max-width: 100px;
-    height: 50px;
+    aspect-ratio: 4/2;
   }
   .logo__img {
     width: 100%;
@@ -118,7 +118,7 @@ body {
             align-items: center;
   }
   .header__contacts {
-    color: var(--accent-color);
+    color: white;
     font-size: 12px;
     text-align: center;
   }
@@ -135,15 +135,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-left: 28px;
     position: relative;
   }
   .header__email a::before {
     content: "";
     margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    background: url("../images/icons/header/email_icon.svg");
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/header/email_icon.svg") center/contain no-repeat;
   }
   .header__phone a {
     display: -webkit-box;
@@ -160,9 +159,9 @@ body {
   .header__phone a::before {
     content: "";
     margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    background: url("../images/icons/header/phone-call_icon.svg");
+    width: 16px;
+    height: 16px;
+    background: url("../images/icons/header/phone-call_icon.svg") center/contain no-repeat;
   }
   .header__lang {
     color: beige;
@@ -389,6 +388,9 @@ body {
     padding-bottom: 8px;
     font-size: 18px;
   }
+  .contact-us__comment {
+    resize: none;
+  }
   .contact-us__comment::-webkit-input-placeholder {
     font-size: 18px;
   }
@@ -423,7 +425,7 @@ body {
     position: relative;
     color: #FFF;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 24px;
   }
   .footer:before {
     content: "";
@@ -497,20 +499,27 @@ body {
   .container {
     width: 83%;
   }
+  .logo {
+    max-width: 150px;
+  }
   /* Header Start */
   .header {
     padding-top: 16px;
   }
   .header__contacts {
+    margin: 0 auto;
+    width: 55%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 32px;
-       -moz-column-gap: 32px;
-            column-gap: 32px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 18px;
   }
   .header__email {
     margin-bottom: 0;
+    -ms-flex-item-align: start;
+        align-self: start;
   }
   /* Header End */
   /* Basic-slider Start */
@@ -530,6 +539,9 @@ body {
     padding-top: 16px;
     padding-bottom: 32px;
   }
+  .team__message-text {
+    font-size: initial;
+  }
   /* Team End*/
   /* Find-us Start */
   /* Find-us End */
@@ -538,12 +550,120 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+  .contact-us label {
+    margin-bottom: 12px;
+  }
+  .contact-us__form {
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    -webkit-column-gap: 8px;
+       -moz-column-gap: 8px;
+            column-gap: 8px;
+    grid-template-areas: "in c" "ie c";
+  }
+  .contact-us__field {
+    padding: 8px;
+  }
+  .contact-us__name {
+    grid-area: in;
+  }
+  .contact-us__email {
+    grid-area: ie;
+  }
+  .contact-us__comment {
+    grid-area: c;
+  }
+  .contact-us__btn {
+    grid-column: 1/-1;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-top: 8px;
+  }
   /* Contact-us End */
   /* Footer Start */
   .footer {
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
+  }
+  .footer__adult-icon {
+    width: 75px;
   }
   /* Footer End */
+}
+@media (min-width: 1000px) {
+  .container {
+    width: 96%;
+  }
+  .logo {
+    max-width: 175px;
+  }
+  /* Header Start */
+  .header {
+    padding-top: 16px;
+  }
+  .header__contacts {
+    font-size: 24px;
+  }
+  .header__email a::before {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+  .header__phone a::before {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+  .header__lang {
+    font-size: 20px;
+    line-height: 28px;
+    padding: 12px 24px;
+  }
+  .header__lang-switcher {
+    font-size: 20px;
+  }
+  /* Header End */
+  /* Team Start */
+  .team__members {
+    margin-bottom: 24px;
+  }
+  .team__member {
+    -ms-flex-preferred-size: 18%;
+        flex-basis: 18%;
+    font-size: 20px;
+  }
+  .team__member img {
+    margin-bottom: 8px;
+  }
+  .team__member-post {
+    font-size: 16px;
+  }
+  .team__message {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .team__message-text {
+    font-size: 20px;
+  }
+  .team__message-text:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  /* Team End */
+  /* Contact-us Start */
+  .contact-us__form {
+    margin: 0 auto;
+    max-width: 90%;
+    grid-template-rows: repeat(2, 80px);
+  }
+  .contact-us__btn {
+    margin-top: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  /* Contact-us End */
 }
 /* MAIN STYLES */
