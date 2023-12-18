@@ -195,9 +195,14 @@ body {
   .basic-slider {
     padding-top: 12px;
     padding-bottom: 12px;
-    min-height: 205px;
   }
-  .basic-slider__img > img {
+  .basic-slider__wrap {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .basic-slider__img {
     max-width: 100%;
     height: auto;
   }
