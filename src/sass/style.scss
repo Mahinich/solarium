@@ -225,32 +225,28 @@ body {
 
   /* Find-us Start */
   .find-us {
-    height: 40%;
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #fff;
     &__wrap {
-      height: 100%;
-      display: flex;
-      align-items: center;
+      white-space: nowrap;
+
     }
     &__partners {
-      display: flex;
-      column-gap: 16px;
-      align-items: center;
-      justify-content: space-between;
-      animation: slide 25s linear infinite;
+      display: inline-block;
+      animation: slide 10s infinite linear;
       &-logo {
-        min-width: 30%;
-        aspect-ratio: 4/2;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        height: 40px;
+        margin: 0 10px;
       }
     }
     @keyframes slide {
-      from {transform: translateX(0);}
-      to{transform: translateX(-100%);}
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
     }
   }
   /* Find-us End */
@@ -394,6 +390,12 @@ body {
     }
   }
   /* Header End*/
+  
+  /* FInd-us Start */
+  .find-us__partners-logo {
+    height: 60px;
+  }
+  /* FInd-us End */
 
   /* Contact-us Start */
   .contact-us {
@@ -455,9 +457,11 @@ body {
   }
   /* Team End*/
 
-  /* Find-us Start */
- 
-  /* Find-us End */
+  /* FInd-us Start */
+  .find-us__partners-logo {
+    height: 90px;
+  }
+  /* FInd-us End */
 
   /* Contact-us Start */
   .contact-us {
@@ -573,6 +577,13 @@ body {
     }
   }
   /* Team End */
+
+   /* FInd-us Start */
+  .find-us__partners-logo {
+    height: 120px;
+    margin: 0 20px;
+  }
+  /* FInd-us End */
 
   /* Contact-us Start */
   .contact-us {
