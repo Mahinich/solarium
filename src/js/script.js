@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // const basicSliderImgs = document.querySelectorAll('.basic-slider__img');
   const basicSliderImg = document.querySelector('.basic-slider__img');
   const langSwitch = document.querySelector('.header__lang-switcher')
-  const allLangs = ['en', 'ua', 'sp'];
+  const allLangs = ['en', 'ua'];
 
   const images = [
     // 'images/basic-slider/basic_slider-0.jpg',
@@ -38,17 +38,30 @@ document.addEventListener('DOMContentLoaded', () => {
   function changeLang() {
     let hash = window.location.hash;
     hash = hash.substring(1);
-    // console.log(hash);
 
-    if (!allLangs.includes.hash) {
+    if (!allLangs.includes(hash)) {
       location.href = `${window.location.pathname}#en`;
-      // location.reload();
+      location.reload();
     }
     langSwitch.value = hash;
+
+
+    for (key in translations) {
+      let element = document.querySelector(`.lang-${key}`); 
+      element.textContent = translations[key][hash];
+
+      if (key === 'message') {
+        element.textContent = '';
+      }
+      
+      if (key == 'name' || key === 'email' || key === 'message') {
+        element.placeholder = translations[key][hash];
+      }
+
+    }
   }
   changeLang()
   /* Lang Switcher End */
-
 
 })
 
