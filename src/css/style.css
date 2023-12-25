@@ -91,8 +91,7 @@ body {
     width: 95%;
   }
   .logo {
-    max-width: 100px;
-    aspect-ratio: 4/2;
+    max-width: 50px;
   }
   .logo__img {
     width: 100%;
@@ -104,7 +103,9 @@ body {
   }
   /* Header Start */
   .header {
-    padding-top: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #160E33;
   }
   .header__wrap {
     display: -webkit-box;
@@ -117,51 +118,17 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header__contacts {
-    color: white;
-    font-size: 12px;
-    text-align: center;
+  .header__nav {
+    color: beige;
+    font-size: 14px;
   }
-  .header__email {
-    margin-bottom: 8px;
-  }
-  .header__email a {
+  .header__nav-items-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
   }
-  .header__email a::before {
-    content: "";
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
-    background: url("../images/icons/header/email_icon.svg") center/contain no-repeat;
-  }
-  .header__phone a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
-  }
-  .header__phone a::before {
-    content: "";
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
-    background: url("../images/icons/header/phone-call_icon.svg") center/contain no-repeat;
+  .header__nav-item {
+    margin: 0 8px;
   }
   .header__lang {
     color: beige;
@@ -196,15 +163,11 @@ body {
   /* Header End */
   /* Basic-slider Start */
   .basic-slider {
-    padding-top: 12px;
+    z-index: 0;
     padding-bottom: 12px;
   }
-  .basic-slider__wrap {
-    width: 100%;
-  }
   .basic-slider__img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
   /* Basic-slider End*/
   /* Games Start */
@@ -504,9 +467,6 @@ body {
     letter-spacing: 4px;
     font-size: 14px;
   }
-  .header__contacts {
-    font-size: 16px;
-  }
   /* Header End*/
   /* FInd-us Start */
   .find-us__partners-logo {
@@ -531,25 +491,9 @@ body {
   .header {
     padding-top: 16px;
   }
-  .header__contacts {
-    margin: 0 auto;
-    width: 55%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: 18px;
-  }
-  .header__email {
-    margin-bottom: 0;
-    -ms-flex-item-align: start;
-        align-self: start;
-  }
   /* Header End */
   /* Basic-slider Start */
   .basic-slider {
-    padding-top: 16px;
     padding-bottom: 16px;
   }
   /* Basic-slider End */
@@ -621,27 +565,14 @@ body {
 }
 @media (min-width: 1000px) {
   .container {
-    width: 96%;
+    width: 80%;
   }
   .logo {
-    max-width: 175px;
+    max-width: 70px;
   }
   /* Header Start */
   .header {
     padding-top: 16px;
-  }
-  .header__contacts {
-    font-size: 24px;
-  }
-  .header__email a::before {
-    margin-right: 16px;
-    width: 40px;
-    height: 40px;
-  }
-  .header__phone a::before {
-    margin-right: 16px;
-    width: 40px;
-    height: 40px;
   }
   .header__lang {
     font-size: 20px;

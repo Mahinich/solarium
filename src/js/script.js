@@ -1,6 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
   // const basicSliderWrap = document.querySelector('.basic-slider__wrap');
   // const basicSliderImgs = document.querySelectorAll('.basic-slider__img');
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    autoplay: {
+      delay: 3000,
+    },
+    effect: 'fade',
+  });
+
   const basicSliderImg = document.querySelector('.basic-slider__img');
   const langSwitch = document.querySelector('.header__lang-switcher')
   const allLangs = ['en', 'ua'];
@@ -13,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeIndex = 0;
   /* SLider Start */
-  function sliderImgAnim() {
+/*   function sliderImgAnim() {
 
     basicSliderImg.src = images[activeIndex];
     activeIndex++;
@@ -23,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
   }
-  setInterval(sliderImgAnim, 5500)
+  setInterval(sliderImgAnim, 2500) */
   /* Slider End */
 
   /* Lang Switcher Start */
@@ -63,12 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
   changeLang()
   /* Lang Switcher End */
 
-})
+  window.addEventListener('scroll', function() {
+    let header = document.querySelector('.header');
+    if (window.scrollY > 1) {
+        header.style.position = 'fixed';
+        header.style.top = 0 + 'px';
+        header.style.left = 0;
+        header.style.right = 0;
+        header.style.zIndex = 1;
+    } else {
+        header.style.position = 'relative'; // or your preferred default position
+    }
+  });
 
-/* function changeImage() {
-    basicSliderImgs[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex + 1) % basicSliderImgs.length;
-    basicSliderImgs[activeIndex].classList.add('active');
-  }
-  
-  setInterval(changeImage, 3000); */
+  document.querySelector('.basic-slider')
+
+})

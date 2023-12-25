@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Slotarium</title>
 </head>
@@ -15,16 +17,16 @@
       <div class="header__logo logo">
         <img src="images/logo.png" alt="logo" class="header__logo-img logo__img">
       </div>
-  
-        <address class="header__contacts">
-          <div class="header__email">
-            <a href="mailto:somemail@gmail.com">somemail@gmail.com</a>
-          </div>
-    
-          <div class="header__phone">
-            <a href="tel:+1234567890">+1234567890</a>
-          </div>
-        </address>
+      
+      <nav class="header__nav">
+        <ul class="header__nav-items-list">
+          <li class="header__nav-item"><a href="#games" class="header__nav-link">games</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">partners</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">about us</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">contact us</a></li>
+          <li class="header__nav-item"><a href="" class="header__nav-link">quality</a></li>
+        </ul>
+      </nav>
   
       <div class="header__lang">
         <label class="lang-label" for="lang-switch">Lang</label>
@@ -38,15 +40,20 @@
   </header>
 
   <main class="main">
-    <section class="basic-slider">
-      <div class="basic-slider__wrap">
-        <!-- <img class="basic-slider__img" src="images/basic-slider/basic_slider-0.jpg" alt="slider-img_1"> -->
-        <img class="basic-slider__img" src="images/basic-slider/basic_slider-1.jpg" alt="slider-img">
-        <!-- <img class="basic-slider__img" src="images/basic-slider/basic_slider-2.jpg" alt="slider-img_3">  -->
+    <section class="basic-slider swiper">
+      <div class="basic-slider__wrap swiper-wrapper">
+        <div class="basic-slider__item swiper-slide"><img class="basic-slider__img" src="images/basic-slider/basic_slider-3.jpg" alt="slider-img"></div>
+        <div class="basic-slider__item swiper-slide"><img class="basic-slider__img" src="images/basic-slider/basic_slider-4.jpg" alt="slider-img"></div>
+        <div class="basic-slider__item swiper-slide"><img class="basic-slider__img" src="images/basic-slider/basic_slider-5.jpg" alt="slider-img"></div>
       </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
   
-    <section class="games">
+    <section id="games" class="games">
       <div class="container games__wrap">
         <div class="games__items">
           <div class="games__item">
@@ -223,6 +230,8 @@
     </div>
   </footer>
   
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <script src="js/swiper-bundle.js"></script>
   <script src="js/lang.js"></script>
   <script src="js/script.js"></script>
 </body>
