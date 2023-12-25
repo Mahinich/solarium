@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,12 +19,15 @@
       </div>
       
       <nav class="header__nav">
-        <ul class="header__nav-items-list">
+        <div class="header__nav-hamburger">
+          <span></span>
+        </div>
+        <ul class="header__nav-items-list hidden">
           <li class="header__nav-item"><a href="#games" class="header__nav-link">games</a></li>
-          <li class="header__nav-item"><a href="" class="header__nav-link">partners</a></li>
-          <li class="header__nav-item"><a href="" class="header__nav-link">about us</a></li>
-          <li class="header__nav-item"><a href="" class="header__nav-link">contact us</a></li>
-          <li class="header__nav-item"><a href="" class="header__nav-link">quality</a></li>
+          <li class="header__nav-item"><a href="#find-us" class="header__nav-link">partners</a></li>
+          <li class="header__nav-item"><a href="#about" class="header__nav-link">about us</a></li>
+          <li class="header__nav-item"><a href="#contact" class="header__nav-link">contact us</a></li>
+          <li class="header__nav-item"><a href="#quality" class="header__nav-link">quality</a></li>
         </ul>
       </nav>
   
@@ -122,53 +125,54 @@
       </div>
     </section>
 
-    <section class="team">
-      <div class="container team__wrap">
-        <div class="team__members">
-          <div class="team__member">
-            <img src="images/team/member_plug.png" alt="" class="team__member-photo">
-            <hr class="team__member-divider">
-            <div class="team__member-name lang-member1">Name</div>
-            <div class="team__member-post lang-post1">Post</div>
+    <section id="about" class="about">
+      <div class="container about__wrap">
+        <div class="about__points">
+          <div class="about__point">
+            <img src="images/team/member_plug.png" alt="" class="about__point-photo">
+            <hr class="about__point-divider">
+            <div class="about__point-value lang-value1">Value</div>
+            <div class="about__point-descr lang-descr1">Descr</div>
           </div>
 
-          <div class="team__member">
-            <img src="images/team/member_plug.png" alt="" class="team__member-photo">
-            <hr class="team__member-divider">
-            <div class="team__member-name lang-member2">Name</div>
-            <div class="team__member-post lang-post2">Post</div>
+          <div class="about__point">
+            <img src="images/team/member_plug.png" alt="" class="about__point-photo">
+            <hr class="about__point-divider">
+            <div class="about__point-value lang-value2">Value</div>
+            <div class="about__point-descr lang-descr2">Descr</div>
           </div>
 
-          <div class="team__member">
-            <img src="images/team/member_plug.png" alt="" class="team__member-photo">
-            <hr class="team__member-divider">
-            <div class="team__member-name lang-member3">Name</div>
-            <div class="team__member-post lang-post3">Post</div>
+          <div class="about__point">
+            <img src="images/team/member_plug.png" alt="" class="about__point-photo">
+            <hr class="about__point-divider">
+            <div class="about__point-value lang-value3">Value</div>
+            <div class="about__point-descr lang-descr3">Descr</div>
           </div>
 
-          <div class="team__member">
-            <img src="images/team/member_plug.png" alt="" class="team__member-photo">
-            <hr class="team__member-divider">
-            <div class="team__member-name lang-member4">Name</div>
-            <div class="team__member-post lang-post4">Post</div>
+          <div class="about__point">
+            <img src="images/team/member_plug.png" alt="" class="about__point-photo">
+            <hr class="about__point-divider">
+            <div class="about__point-value lang-value4">Value</div>
+            <div class="about__point-descr lang-descr4">Descr</div>
           </div>
 
-          <div class="team__member">
-            <img src="images/team/member_plug.png" alt="" class="team__member-photo">
-            <hr class="team__member-divider">
-            <div class="team__member-name lang-member5">Name</div>
-            <div class="team__member-post lang-post5">Post</div>
+          <div class="about__point">
+            <img src="images/team/member_plug.png" alt="" class="about__point-photo">
+            <hr class="about__point-divider">
+            <div class="about__point-value lang-value5">Value</div>
+            <div class="about__point-descr lang-descr5">Descr</div>
           </div>
-        </div>
 
-        <div class="team__message">
-          <p class="team__message-text lang-p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p class="team__message-text lang-p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+         
+
+        <div class="about__message">
+          <p class="about__message-text lang-p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <p class="about__message-text lang-p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
       </div>
     </section>
 
-    <section class="find-us">
+    <section id="find-us" class="find-us">
       <div class="container find-us__wrap">
         <div class="find-us__partners">
           <img class="find-us__partners-logo" src="images/find-us/softswiss-logo-1.webp" alt="softswiss">
@@ -189,7 +193,7 @@
       </div>
     </section>
 
-    <section class="verifications">
+    <section id="quality" class="verifications">
       <div class="container verifications__wrap">
         <div class="verifications__items">
           <div class="verifications__item"><img src="images/icons/verifications/certification.png" alt="certification-icon"></div>
@@ -199,7 +203,7 @@
       </div>
     </section>
 
-    <section class="contact-us">
+    <section id="contact" class="contact-us">
       <div class="container contact-us__wrap">
         <label class='lang-contact_us_label' for="form">Get in Touch</label>
         <form id='form' class="contact-us__form">
@@ -224,9 +228,9 @@
         </div>
       </div>
 
-      <div class="footer__pr-policy">
+      <!-- <div class="footer__pr-policy">
         <a href="privacy_policy/privacy.html">Privacy Policy</a>
-      </div>
+      </div> -->
     </div>
   </footer>
   

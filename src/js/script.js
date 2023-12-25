@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // const basicSliderWrap = document.querySelector('.basic-slider__wrap');
-  // const basicSliderImgs = document.querySelectorAll('.basic-slider__img');
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -23,32 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     effect: 'fade',
   });
 
-  const basicSliderImg = document.querySelector('.basic-slider__img');
   const langSwitch = document.querySelector('.header__lang-switcher')
   const allLangs = ['en', 'ua'];
 
-  const images = [
-    // 'images/basic-slider/basic_slider-0.jpg',
-    'images/basic-slider/basic_slider-1.jpg',
-    'images/basic-slider/basic_slider-2.jpg'
-  ];
-
-  let activeIndex = 0;
-  /* SLider Start */
-/*   function sliderImgAnim() {
-
-    basicSliderImg.src = images[activeIndex];
-    activeIndex++;
-
-    if (activeIndex == 2) {
-      activeIndex = 0;
-    }
-
-  }
-  setInterval(sliderImgAnim, 2500) */
-  /* Slider End */
-
-  /* Lang Switcher Start */
   langSwitch.addEventListener('change', changeLangURL);
 
   function changeLangURL() {
@@ -85,19 +60,36 @@ document.addEventListener('DOMContentLoaded', () => {
   changeLang()
   /* Lang Switcher End */
 
+
+  /* Sticky Header Start */
   window.addEventListener('scroll', function() {
     let header = document.querySelector('.header');
     if (window.scrollY > 1) {
-        header.style.position = 'fixed';
-        header.style.top = 0 + 'px';
-        header.style.left = 0;
-        header.style.right = 0;
-        header.style.zIndex = 1;
+        header.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        box-shadow: inset 0 0 15px 3px rgba(0,0,0,1);
+      `
     } else {
         header.style.position = 'relative'; // or your preferred default position
     }
   });
 
   document.querySelector('.basic-slider')
+  /* Sticky Header End */
 
+  /* Hamburger Menu Start */
+  const hamburger = document.querySelector('.header__nav-hamburger');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    const menuList = document.querySelector('.header__nav-items-list');
+    menuList.classList.toggle('hidden');
+
+  })
+
+  /* Hamburger Menu End */
 })

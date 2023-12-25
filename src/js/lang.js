@@ -23,45 +23,45 @@ const translations = {
     en:'get in touch',
     ua:'звʼязатись з нами'
   },
-  member1: {
-    en: 'name 1',
-    ua: 'імʼя 1'
+  value1: {
+    en: 'value1',
+    ua: 'цінність1'
   },
-  post1: {
-    en: 'post 1',
-    ua: 'посада 1'
+  descr1: {
+    en: 'descr1',
+    ua: 'опис1'
   },
-  member2: {
-    en: 'name 1',
-    ua: 'імʼя 1'
+  value2: {
+    en: 'value2',
+    ua: 'цінність2'
   },
-  post2: {
-    en: 'post 2',
-    ua: 'посада 2'
+  descr2: {
+    en: 'descr2',
+    ua: 'опис2'
   },
-  member3: {
-    en: 'name 3',
-    ua: 'імʼя 3'
+  value3: {
+    en: 'value3',
+    ua: 'цінність3'
   },
-  post3: {
-    en: 'post 3',
-    ua: 'посада 3'
+  descr3: {
+    en: 'descr3',
+    ua: 'опис3'
   },
-  member4: {
-    en: 'name 4',
-    ua: 'імʼя 4'
+  value4: {
+    en: 'value4',
+    ua: 'цінність4'
   },
-  post4: {
-    en: 'post 4',
-    ua: 'посада 4'
+  descr4: {
+    en: 'descr4',
+    ua: 'опис4'
   },
-  member5: {
-    en: 'name 5',
-    ua: 'імʼя 5'
+  value5 : {
+    en: 'value5 ',
+    ua: 'цінність5 '
   },
-  post5: {
-    en: 'post 5',
-    ua: 'посада 5'
+  descr5 : {
+    en: 'descr5 ',
+    ua: 'опис5 '
   },
   p1: {
     en: 'an instance of english text for P1',

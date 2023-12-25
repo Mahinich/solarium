@@ -71,7 +71,7 @@ select {
 
 body {
   overflow-x: clip;
-  background-color: #160E33;
+  background-color: rgb(0, 0, 0);
 }
 
 .container {
@@ -91,7 +91,7 @@ body {
     width: 95%;
   }
   .logo {
-    max-width: 50px;
+    width: 20%;
   }
   .logo__img {
     width: 100%;
@@ -103,9 +103,9 @@ body {
   }
   /* Header Start */
   .header {
+    position: relative;
     padding-top: 4px;
     padding-bottom: 4px;
-    background-color: #160E33;
   }
   .header__wrap {
     display: -webkit-box;
@@ -119,20 +119,96 @@ body {
             align-items: center;
   }
   .header__nav {
+    text-transform: uppercase;
     color: beige;
-    font-size: 14px;
+    font-size: 12px;
   }
-  .header__nav-items-list {
+  .header__nav-hamburger {
+    cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 30px;
+    position: relative;
+  }
+  .header__nav-hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #FFF;
+  }
+  .header__nav-hamburger::before, .header__nav-hamburger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__nav-hamburger::before {
+    top: 0;
+    left: 0;
+  }
+  .header__nav-hamburger::after {
+    bottom: 0;
+    left: 0;
+  }
+  .header__nav-hamburger.active span {
+    visibility: hidden;
+  }
+  .header__nav-hamburger.active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(-45deg) translate(0, 50%);
+            transform: rotate(-45deg) translate(0, 50%);
+  }
+  .header__nav-hamburger.active::before {
+    -webkit-transform: rotate(45deg) translate(0, -50%);
+            transform: rotate(45deg) translate(0, -50%);
+    top: 50%;
+  }
+  .header__nav-items-list {
+    font-weight: 500;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__nav-items-list.hidden {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   .header__nav-item {
-    margin: 0 8px;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+  .header__nav-link {
+    vertical-align: bottom;
   }
   .header__lang {
     color: beige;
-    border: 1px solid var(--accent-color);
+    border: 1px solid gray;
     border-radius: 8px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -198,14 +274,14 @@ body {
     margin-bottom: 4px;
   }
   /* Games End*/
-  /* Team Start*/
-  .team {
+  /* About Start*/
+  .about {
     color: #fff;
     padding-top: 12px;
     padding-bottom: 12px;
     min-height: 300px;
   }
-  .team__members {
+  .about__points {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -217,7 +293,7 @@ body {
     gap: 12px;
     margin-bottom: 16px;
   }
-  .team__member {
+  .about__point {
     border-radius: 12px;
     -webkit-box-shadow: 0px 0px 40px 0px rgba(239, 68, 59, 0.4);
             box-shadow: 0px 0px 40px 0px rgba(239, 68, 59, 0.4);
@@ -238,31 +314,31 @@ body {
             align-items: center;
     padding-bottom: 4px;
   }
-  .team__member-photo {
+  .about__point-photo {
     width: 100%;
     margin-bottom: 4px;
   }
-  .team__member-divider {
+  .about__point-divider {
     width: 100%;
     height: 1px;
     background-color: #FFF;
     margin-bottom: 4px;
   }
-  .team__member-name {
+  .about__point-value {
     margin-bottom: 2px;
   }
-  .team__member-post {
+  .about__point-descr {
     color: var(--accent-color);
     font-weight: 500;
     font-size: 12px;
   }
-  .team__message-text {
+  .about__message-text {
     font-size: 12px;
   }
-  .team__message-text:not(:last-child) {
+  .about__message-text:not(:last-child) {
     margin-bottom: 12px;
   }
-  /* Team End*/
+  /* About End*/
   /* Find-us Start */
   .find-us {
     padding-top: 12px;
@@ -467,6 +543,10 @@ body {
     letter-spacing: 4px;
     font-size: 14px;
   }
+  .header__nav-items-list {
+    font-size: 16px;
+    padding: 12px 0;
+  }
   /* Header End*/
   /* FInd-us Start */
   .find-us__partners-logo {
@@ -481,15 +561,39 @@ body {
   /* Contact-us End */
 }
 @media (min-width: 767px) {
-  .container {
-    width: 83%;
-  }
+  /*  .container {
+     width: 90%;
+   } */
   .logo {
-    max-width: 150px;
+    width: 12%;
+    margin-right: 16px;
   }
   /* Header Start */
   .header {
-    padding-top: 16px;
+    padding-top: 4px;
+  }
+  .header__nav-hamburger {
+    display: none;
+  }
+  .header__nav-items-list {
+    text-align: center;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    font-size: 14px;
+    width: 100%;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    background: transparent;
+  }
+  .header__nav-items-list.hidden {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header__lang {
+    margin-left: 16px;
   }
   /* Header End */
   /* Basic-slider Start */
@@ -503,15 +607,15 @@ body {
     padding-bottom: 16px;
   }
   /* Games End */
-  /* Team Start*/
-  .team {
+  /* About Start*/
+  .about {
     padding-top: 16px;
     padding-bottom: 32px;
   }
-  .team__message-text {
+  .about__message-text {
     font-size: initial;
   }
-  /* Team End*/
+  /* About End*/
   /* FInd-us Start */
   .find-us__partners-logo {
     height: 90px;
@@ -568,12 +672,9 @@ body {
     width: 80%;
   }
   .logo {
-    max-width: 70px;
+    width: 8%;
   }
   /* Header Start */
-  .header {
-    padding-top: 16px;
-  }
   .header__lang {
     font-size: 20px;
     line-height: 28px;
@@ -584,29 +685,29 @@ body {
   }
   /* Header End */
   /* Team Start */
-  .team__members {
+  .about__points {
     margin-bottom: 24px;
   }
-  .team__member {
+  .about__point {
     -ms-flex-preferred-size: 18%;
         flex-basis: 18%;
     font-size: 20px;
   }
-  .team__member img {
+  .about__point img {
     margin-bottom: 8px;
   }
-  .team__member-post {
+  .about__point-descr {
     font-size: 16px;
   }
-  .team__message {
+  .about__message {
     width: 70%;
     margin: 0 auto;
     text-align: center;
   }
-  .team__message-text {
+  .about__message-text {
     font-size: 20px;
   }
-  .team__message-text:not(:last-child) {
+  .about__message-text:not(:last-child) {
     margin-bottom: 24px;
   }
   /* Team End */
