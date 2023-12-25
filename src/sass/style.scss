@@ -10,7 +10,7 @@
 }
  
 body {
-  overflow-x: clip;
+  // overflow: clip;
   background-color: rgb(0, 0, 0);
 }
 
@@ -246,6 +246,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #fff;
+    overflow: clip;
     &__wrap {
       white-space: nowrap;
 
