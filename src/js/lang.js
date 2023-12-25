@@ -3,23 +3,7 @@ const translations = {
     en:"lang",
     ua:"мова"
   },
-  name: {
-    en:"name",
-    ua:"імʼя"
-  },
-  email: {
-    en:'email',
-    ua:'електронна пошта'
-  },
-  message: {
-    en:'type your text',
-    ua:'ваш текст'
-  },
-  contact_us_btn: {
-    en:'submit',
-    ua:'підтвердити'
-  },
-  contact_us_label: {
+  contact_label: {
     en:'get in touch',
     ua:'звʼязатись з нами'
   },

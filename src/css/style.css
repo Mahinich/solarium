@@ -177,6 +177,7 @@ body {
     padding-top: 8px;
     padding-bottom: 8px;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -273,6 +274,46 @@ body {
     margin-bottom: 4px;
   }
   /* Games End*/
+  /* Find-us Start */
+  .find-us {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #fff;
+    overflow: clip;
+  }
+  .find-us__wrap {
+    white-space: nowrap;
+  }
+  .find-us__partners {
+    display: inline-block;
+    -webkit-animation: slide 10s infinite linear;
+            animation: slide 10s infinite linear;
+  }
+  .find-us__partners-logo {
+    height: 40px;
+    margin: 0 10px;
+  }
+  @-webkit-keyframes slide {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+  }
+  @keyframes slide {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+  }
+  /* Find-us End */
   /* About Start*/
   .about {
     color: #fff;
@@ -338,46 +379,6 @@ body {
     margin-bottom: 12px;
   }
   /* About End*/
-  /* Find-us Start */
-  .find-us {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #fff;
-    overflow: clip;
-  }
-  .find-us__wrap {
-    white-space: nowrap;
-  }
-  .find-us__partners {
-    display: inline-block;
-    -webkit-animation: slide 10s infinite linear;
-            animation: slide 10s infinite linear;
-  }
-  .find-us__partners-logo {
-    height: 40px;
-    margin: 0 10px;
-  }
-  @-webkit-keyframes slide {
-    from {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    to {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-  }
-  @keyframes slide {
-    from {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    to {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-  }
-  /* Find-us End */
   /* Verifications Start */
   .verifications {
     padding-top: 12px;
@@ -405,78 +406,17 @@ body {
   }
   /* Verifications End */
   /* Contact-us Start */
-  .contact-us {
+  .contact {
+    color: #FFF;
     padding-top: 12px;
     padding-bottom: 12px;
   }
-  .contact-us label {
+  .contact__heading {
     text-align: center;
-    display: block;
     color: #FFF;
     margin-bottom: 4px;
     text-transform: uppercase;
     font-weight: 500;
-  }
-  .contact-us__field {
-    width: 100%;
-    color: #434343;
-    -webkit-box-shadow: inset 0 0 4px 4px rgba(239, 68, 59, 0.4);
-            box-shadow: inset 0 0 4px 4px rgba(239, 68, 59, 0.4);
-    border-radius: 4px;
-    margin-bottom: 8px;
-  }
-  .contact-us__field::-webkit-input-placeholder {
-    text-transform: capitalize;
-  }
-  .contact-us__field::-moz-placeholder {
-    text-transform: capitalize;
-  }
-  .contact-us__field:-ms-input-placeholder {
-    text-transform: capitalize;
-  }
-  .contact-us__field::-ms-input-placeholder {
-    text-transform: capitalize;
-  }
-  .contact-us__field::placeholder {
-    text-transform: capitalize;
-  }
-  .contact-us input[type=text], .contact-us input[type=email] {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 18px;
-  }
-  .contact-us__comment {
-    resize: none;
-  }
-  .contact-us__comment::-webkit-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-us__comment::-moz-placeholder {
-    font-size: 18px;
-  }
-  .contact-us__comment:-ms-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-us__comment::-ms-input-placeholder {
-    font-size: 18px;
-  }
-  .contact-us__comment::placeholder {
-    font-size: 18px;
-  }
-  .contact-us__btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    display: block;
-    background-color: var(--accent-color);
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-    color: #FFF;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
   }
   /* Contact-us End*/
   /* Footer Start */
@@ -561,9 +501,6 @@ body {
   /* Contact-us End */
 }
 @media (min-width: 767px) {
-  /*  .container {
-     width: 90%;
-   } */
   .logo {
     width: 12%;
     margin-right: 16px;
@@ -607,6 +544,11 @@ body {
     padding-bottom: 16px;
   }
   /* Games End */
+  /* FInd-us Start */
+  .find-us__partners-logo {
+    height: 90px;
+  }
+  /* FInd-us End */
   /* About Start*/
   .about {
     padding-top: 16px;
@@ -616,11 +558,6 @@ body {
     font-size: initial;
   }
   /* About End*/
-  /* FInd-us Start */
-  .find-us__partners-logo {
-    height: 90px;
-  }
-  /* FInd-us End */
   /* Contact-us Start */
   .contact-us {
     padding-top: 32px;
@@ -684,7 +621,13 @@ body {
     font-size: 20px;
   }
   /* Header End */
-  /* Team Start */
+  /* FInd-us Start */
+  .find-us__partners-logo {
+    height: 120px;
+    margin: 0 20px;
+  }
+  /* FInd-us End */
+  /* About Start */
   .about__points {
     margin-bottom: 24px;
   }
@@ -710,13 +653,7 @@ body {
   .about__message-text:not(:last-child) {
     margin-bottom: 24px;
   }
-  /* Team End */
-  /* FInd-us Start */
-  .find-us__partners-logo {
-    height: 120px;
-    margin: 0 20px;
-  }
-  /* FInd-us End */
+  /* About End */
   /* Contact-us Start */
   .contact-us__form {
     margin: 0 auto;
