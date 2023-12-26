@@ -92,4 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   /* Hamburger Menu End */
+
+  const gameLinks = document.querySelectorAll('.games__item-link');
+
+  gameLinks.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+    })
+  });
 })

@@ -62,6 +62,8 @@ body {
       color:beige;
       font-size: 12px;
       &-hamburger {
+        background-color: rgba(0, 0, 0, .2);
+        box-shadow: 0 0 5px 2px #000;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -135,6 +137,7 @@ body {
     &__lang {
       color:beige;
       border: 1px solid gray;
+      background-color: rgba(0, 0, 0, .3);
       border-radius: 8px;
       display: flex;
       flex-direction: column;
@@ -173,19 +176,20 @@ body {
     padding-bottom: 12px;
     &__items {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       column-gap: 12px;
-      row-gap: 12px;
     }
     &__item {
       text-align: center;
+      // height: 50%;
     }
     &__item-img {
-      max-width: 100%;
-      height: auto;
+      width: 100%;
+      height: 80%;
       border-radius: 16px;
       overflow: clip;
       margin-bottom: 4px;
+      object-fit: cover;
     }
   }
   /* Games End*/
@@ -216,6 +220,9 @@ body {
         transform: translateX(-100%);
       }
     }
+    &:hover &__partners {
+      animation-play-state: paused;
+    }
   }
   /* Find-us End */
 
@@ -224,40 +231,42 @@ body {
     color: #fff;
     padding-top: 12px;
     padding-bottom: 12px;
-    min-height: 300px;
+    min-height: fit-content;
     &__points {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-bottom: 16px;
+      // margin-bottom: 16px;
     }
     &__point {
-      &-photo {
-        width: 100%;
-        margin-bottom: 4px;
-      }
+      height: 100px;
       border-radius: 12px;
       box-shadow: 0px 0px 40px 0px rgba(239, 68, 59, 0.40);
       flex-basis: 30%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       padding-bottom: 4px;
       &-divider {
         width: 100%;
         height: 1px;
         background-color: #FFF;
+        opacity: .3;
         margin-bottom: 4px;
       }
       &-value {
+        display: flex;
+        align-items: center;
         margin-bottom: 2px;
+        height: 50%;
       }
       &-descr {
         color:var(--accent-color);
         font-weight: 500;
         font-size: 12px;
+        text-align: center;
       }
     }
     &__message {
@@ -271,28 +280,6 @@ body {
   }
   /* About End*/
 
-  /* Verifications Start */
-  .verifications {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    height: 40%;
-    background-color: #dcd7d7;
-    &__items {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    &__item {
-      max-width: 17%;
-      aspect-ratio: 4 / 4;
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-  /* Verifications End */
-
   /* Contact-us Start */
   .contact {
     color: #FFF;
@@ -301,11 +288,31 @@ body {
     &__heading {
       text-align: center;
       color:#FFF;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       text-transform: uppercase;
       font-weight: 500;
     }
-   
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+      &-link {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      &-duty {
+        margin-top: 4px;
+        letter-spacing: normal;
+        color: var(--accent-color);
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+    
   }
   /* Contact-us End*/
 
@@ -328,7 +335,7 @@ body {
     }
     &__main {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: end;
       margin-bottom: 12px;
     }
@@ -337,24 +344,18 @@ body {
       img {
         width: 100%;
         height: auto;
-        color:#FFF;
       }
     }
-    &__pr-policy {
-      text-transform: uppercase;
-      text-decoration-line: underline;
-      text-align: center;
+    &__certification {
+      width: 50px;
+      img {
+        width: 100%;
+      }
     }
+    
   }
   /* Footer End*/
 
-  /* Privacy Policy Page Start */
-  .pr-policy {
-    &__text:not(:last-child) {
-      margin-bottom: 16px;
-    }
-  } 
-  /* Privacy Policy Page End*/
 }
 
 @media (min-width: 479px) {
@@ -386,12 +387,7 @@ body {
   /* FInd-us End */
 
   /* Contact-us Start */
-  .contact-us {
-    &__btn {
-      padding-top: 12px;
-      padding-bottom: 12px;
-    }
-  }
+  
   /* Contact-us End */
 }
 
@@ -462,40 +458,23 @@ body {
   /* About End*/
 
   /* Contact-us Start */
-  .contact-us {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    label {
-      margin-bottom: 12px;
+  .contact {
+    &__wrap {
+      padding: 0 4%;
     }
-    &__form {
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-      column-gap: 8px;
-      grid-template-areas: 
-      'in c'
-      'ie c';
-    }
-    &__field {
-      padding: 8px;
-    }
-    &__name {
-      grid-area: in;
-    }
-    &__email {
-      grid-area: ie;
-    }
-    &__comment {
-      grid-area: c;
-    }
-    &__btn {
-      grid-column: 1 / -1;
-      width: 100%;
-      font-size: 20px;
-      letter-spacing: 8px;
-      margin-top: 8px;
+    &__item {
+      flex-direction: row;
+      justify-content: space-between;
+      &-link {
+       letter-spacing: 3px;
+      }
+      &-duty {
+        letter-spacing: 1px;
+        font-size: 14px;
+      }
     }
   }
+
   /* Contact-us End */
 
   /* Footer Start */
@@ -503,6 +482,9 @@ body {
     padding-top: 16px;
     padding-bottom: 24px;
     &__adult-icon{
+      width: 75px;
+    }
+    &__certification {
       width: 75px;
     }
   }
@@ -567,22 +549,28 @@ body {
   }
   /* About End */
 
-  /* Contact-us Start */
-  .contact-us {
-    &__form {
-      margin: 0 auto;
-      max-width: 90%;
-      grid-template-rows: repeat(2, 80px);
+  /* Contact Start */
+  
+  /* Contact End */
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    &__wrap {
+      padding: 0;
     }
-    &__btn {
-      width: 30%;
-      margin-top: 16px;
-      padding-top: 16px;
-      padding-bottom: 16px;
-      font-size: 24px;
-      font-weight: 300;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      &-link {
+        letter-spacing: normal;
+      }
+      &-duty {
+        margin-left: 8px;
+      }
     }
   }
-  /* Contact-us End */
 }
 /* MAIN STYLES */
